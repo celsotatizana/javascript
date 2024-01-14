@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<label for="">Quantidade de alunos</label>
+<input type="number" id="quant">
+<button onclick="entrada_notas()">Entrada Notas </button>  
+<h3 id="result"></h3> 
+<script>
+    function entrada_notas(){
+        var quantidade=document.getElementById('quant').value;
+        notas=[];
+        var somatorio=0;
+        var media=0;
+        for (i=0;i<quantidade;i++){
+            notas[i]=Number(prompt("Entre com a nota:"));
+            somatorio=somatorio+notas[i];
+        }
+        media=somatorio/quantidade;
+        document.getElementById('result').textContent="Média="+media;
+    }
+</script>
+</body>
+</html>

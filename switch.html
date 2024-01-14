@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label for="">Cidade de Nascimento:</label>
+    <input type="text" id="cidade">
+</div>
+<div>
+    <button onclick="cidade()">Classificar</button>
+</div>
+<script>
+    function cidade(){
+       var cidade_natal=document.getElementById('cidade').value;
+       switch (cidade_natal){
+          case 'Rio de Janeiro':
+             alert("Você é carioca !");
+             break;
+          case 'São Paulo':
+              alert("Você é paulista !");
+              break;
+          case "Porto Alegre":
+              alert("Voce é gaúcho !");
+              break;
+          default:
+              alert("Não sei !");
+        }
+    }
+</script>
+</body>
+</html>

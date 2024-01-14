@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="animal" placeholder="Digite um animal">
+<button onclick="adicionar()">Adicionar</button>
+<button onclick="listar()">Listar</button>
+<button onclick="consultar()">Consultar</button>
+<div id="lista"></div>
+<script>
+    var animais=[];
+    function adicionar(){
+        var an=document.getElementById('animal').value;
+        animais.push(an);
+        console.table(animais);
+        document.getElementById('animal').value="";
+    }
+    function listar(){
+        var lista_nomes=document.getElementById('lista');
+        for(var i=0;i<animais.length;i++){
+            var paragrafo=document.createElement('p');
+            paragrafo.textContent=animais[i];
+            lista_nomes.appendChild(paragrafo);
+
+        }
+    }
+    function consultar(){
+        var animal=prompt("Digite um animal");
+        for(var i=0;i<animais.length;i++){
+            if (animais[i]==animal){
+                alert("Animal encontrado na posição "+i);
+                break;
+            }
+        }
+        if (i==animais.length){
+            alert("Animal não encontrado na lista");
+        }
+    }
+</script>
+</body>
+</html>

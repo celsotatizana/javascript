@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div>
+    <label for="">Digite o início</label>
+    <input type="number" id="inicio"><br>
+    <label for="">Digite o fim</label>
+    <input type="number" id="fim"><br>
+</div>
+<div>
+    <button onclick="somar_pares()">Somar Números Pares</button>
+</div>
+<h3 id="result"></h3>    
+<script>
+    function somar_pares(){
+        var somatorio_par=0;
+        var resultado=document.getElementById('result');
+        var ini=document.getElementById('inicio').value;
+        var fi=document.getElementById('fim').value;
+        for (var i=ini;i<=fi;i++){
+            if(i%2==0){
+                somatorio_par+=i;
+            }
+        }
+        console.log(somatorio_par);
+        resultado.textContent="Soma dos números pares entre "+ini+" e "+fi+" é igual a "+somatorio_par;
+    }
+</script>
+</body>
+</html>

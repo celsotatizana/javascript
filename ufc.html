@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<label for="">Qual o seu peso ?</label>
+<input type="number" id="peso" step 0.01>
+<button onclick="classificar()">Classificar</button>
+<script>
+    function classificar(){
+        var peso_atleta=document.getElementById('peso').value;
+        var categoria="";
+        if (peso_atleta<=52.2){
+            categoria="Peso Mosca";
+        } else if(peso_atleta<=61.2){
+             categoria="Peso Pena";
+        } else if(peso_atleta<=61.2){
+             categoria="Peso Pena";
+        } else if(peso_atleta<=65.8){
+             categoria="Peso Leve";
+        } else if(peso_atleta<=70.3){
+             categoria="Peso Meio Médio";
+        } else if(peso_atleta<=77.1){
+             categoria="Peso Médio";
+        } else if(peso_atleta<=83.9){
+             categoria="Peso Meio Pesado";
+        } else{
+             categoria="Peso Pesado";
+        }
+        alert(categoria);
+    }
+</script>   
+</body>
+</html>

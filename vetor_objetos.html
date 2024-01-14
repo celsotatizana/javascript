@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+     <label for="">Aluno</label><br>
+     <input type="text" id="aluno"><br>
+     <label for="">Nota 1</label><br>
+     <input type="number" step="0.01" id="nota1"><br>
+     <label for="">Nota 2</label><br>
+     <input type="number" step="0.01" id="nota2"><br>
+</div>
+<div class="container">
+     <button onclick="cadastro()" id="bt_cadastrar">Cadastrar</button>
+     <button onclick="listar()" class="bt">Listar</button><br>
+     <button onclick="excluir()" class="bt">Excluir</button>
+</div>
+<div id="lista"></div>
+<script src="js/javascript.js"></script>
+</body>
+</html> 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function Aluno(nome,idade){
+        this.nome=nome;
+        this.idade=idade;
+        this.imprimir=function(){
+            console.log(this.nome);
+            console.log(this.idade);
+        }
+    }
+    let aluno1=new Aluno("Celso Tatizana", 18);
+    aluno1.imprimir();
+</script>   
+</body>
+</html>

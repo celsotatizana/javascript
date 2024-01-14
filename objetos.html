@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label for="">Valor</label>
+    <input type="number" step="0.01" id="valor">
+</div>
+<div>
+    <button onclick="conta.imprimir_saldo()">Saldo</button>
+    <button onclick="conta.saque(document.getElementById('valor').value)">Saque</button>
+    <button onclick="conta.deposito(document.getElementById('valor').value)">Deposito</button>
+</div>
+<script>
+    let conta={
+        banco:"01",
+        agencia:"101",
+        conta:"12356",
+        nome:"Celso Tatizana",
+        saldo:1000.50,
+        saque:function(valor){
+            if (valor==0){
+                alert("Informe o valor do saque");
+                document.getElementById('valor').focus;
+            }else if (valor>this.saldo){
+                   alert("Saldo insuficiente");
+                   document.getElementById('valor').value=0;     
+            }else { 
+                this.saldo=this.saldo-valor;
+                document.getElementById('valor').value=0;  
+            }    
+        },
+        deposito:function(valor){
+            if (valor==0){
+                alert("Informe o valor do depósito");
+                document.getElementById('valor').focus;
+            }else { 
+                this.saldo=this.saldo+Number(valor);
+                document.getElementById('valor').value=0;  
+            }    
+        },
+        imprimir_saldo:function(){
+            alert("Saldo: "+this.saldo);
+        }
+    }
+</script>    
+</body>
+</html>
